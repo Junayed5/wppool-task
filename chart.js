@@ -1,50 +1,3 @@
-const ctx = document.getElementById("myChart");
-
-new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: ["Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    datasets: [
-      {
-        label: "WPPOOL",
-        data: [3, 2, 5, 19, 25, 35, 46, 80, 95, 98, 100],
-        borderColor: "rgba(252, 113, 77, 1)",
-        borderWidth: 1,
-        fill: false,
-      },
-      {
-        label: "Goggle",
-        data: [2, 4, 5, 6, 23, 4, 57, 67, 68, 86, 76],
-        borderColor: "rgba(97, 93, 227, 1)",
-        borderWidth: 1,
-        fill: false,
-      },
-      {
-        label: "Microsoft",
-        data: [12, 19, 23, 56, 76, 45, 35, 6, 76, 87, 99, 67],
-        borderColor: "rgba(175, 205, 128, 1))",
-        borderWidth: 1,
-        fill: false,
-      },
-      {
-        label: "Twitter",
-        data: [23, 4, 6, 87, 65, 34, 2, 35, 76, 68, 78, 34],
-        borderColor: "rgba(111, 52, 161, 1)",
-        borderWidth: 1,
-        fill: false,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-});
-
 google.charts.load("current", { packages: ["corechart", "line"] });
 google.charts.setOnLoadCallback(drawCrosshairs);
 
@@ -150,3 +103,15 @@ function drawCrosshairs() {
   chart.draw(data, options);
   chart.setSelection([{ row: 6, column: 1 }]);
 }
+
+const menubar = document.getElementById('toggle-bar');
+const menu = document.getElementById('toggle-menu')
+const close = document.getElementById('close')
+
+menubar.addEventListener('click', () => {
+  menu.className = 'absolute block bg-white h-[500px] w-[338px] top-4 rounded-2xl '
+})
+close.addEventListener('click', () => {
+  menu.className = 'absolute hidden bg-white h-[500px] w-[338px] top-4 rounded-2xl '
+})
+
