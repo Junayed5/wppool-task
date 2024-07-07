@@ -5,56 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {packages: ['corechart', 'line']});
-google.charts.setOnLoadCallback(drawCurveTypes);
-
-function drawCurveTypes() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'Dogs');
-      data.addColumn('number', 'Cats');
-
-      data.addRows([
-        [0, 0, 0],    [1, 10, 5],   [2, 23, 15],  [3, 17, 9],   [4, 18, 10],  [5, 9, 5],
-        [6, 11, 3],   [7, 27, 19],  [8, 33, 25],  [9, 40, 32],  [10, 32, 24], [11, 35, 27],
-        [12, 30, 22], [13, 40, 32], [14, 42, 34], [15, 47, 39], [16, 44, 36], [17, 48, 40],
-        [18, 52, 44], [19, 54, 46], [20, 42, 34], [21, 55, 47], [22, 56, 48], [23, 57, 49],
-        [24, 60, 52], [25, 50, 42], [26, 52, 44], [27, 51, 43], [28, 49, 41], [29, 53, 45],
-        [30, 55, 47], [31, 60, 52], [32, 61, 53], [33, 59, 51], [34, 62, 54], [35, 65, 57],
-        [36, 62, 54], [37, 58, 50], [38, 55, 47], [39, 61, 53], [40, 64, 56], [41, 65, 57],
-        [42, 63, 55], [43, 66, 58], [44, 67, 59], [45, 69, 61], [46, 69, 61], [47, 70, 62],
-        [48, 72, 64], [49, 68, 60], [50, 66, 58], [51, 65, 57], [52, 67, 59], [53, 70, 62],
-        [54, 71, 63], [55, 72, 64], [56, 73, 65], [57, 75, 67], [58, 70, 62], [59, 68, 60],
-        [60, 64, 56], [61, 60, 52], [62, 65, 57], [63, 67, 59], [64, 68, 60], [65, 69, 61],
-        [66, 70, 62], [67, 72, 64], [68, 75, 67], [69, 80, 72]
-      ]);
-
-      var options = {
-        hAxis: {
-          title: 'Time'
-        },
-        vAxis: {
-          title: 'Popularity'
-        },
-        series: {
-          1: {curveType: 'function'}
-        }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
     
-  </script>
     <title>Document</title>
   </head>
   <body>
     <div class="   bg-[#EDEDED]">
       <!-- navbar -->
 
-      <section class="sticky top-0 ">
+      <section class="">
         <nav class="bg-[#2042B6] shadow-lg">
             <div class="max-w-7xl mx-auto px-4">
               <div class="flex justify-between">
@@ -144,9 +102,9 @@ function drawCurveTypes() {
       <!-- banner section start here -->
 
       <!-- The WPPOOL Index start here -->
-      <section class="bg-[#FFFFFF] h-[720px] rounded-sm mx-6 my-20">
+      <section class="bg-[#FFFFFF] h-[790px] rounded-sm mx-6 my-20">
         <div class="py-5">
-          <nav class="bg-[#F3F3F3] shadow-lg mx-5 ">
+          <nav class="bg-[#F3F3F3] shadow-lg mx-5 sticky top-0">
             <div class="max-w-7xl mx-auto px-4">
               <div class="flex justify-between">
                   <!-- Logo -->
@@ -186,7 +144,7 @@ function drawCurveTypes() {
           </nav>
 
           <div class="flex">
-            <div class="bg-[#EFF3F6] h-[602px] w-56 mx-6 my-5 rounded-xl">
+            <div class="bg-[#EFF3F6] h-[640px] w-56 mx-6 my-5 rounded-xl">
               <div class="mx-2 py-2">
                 <button class="h-9 w-52 bg-[#2042B6] text-white text-base flex justify-between items-center rounded-md mt-3 px-[10px]"><span>The Index</span> <span>-</span></button>
                 <button class="h-9 w-52 bg-[#EFF3F6] text-[#647888] text-base flex justify-between items-center rounded-md mt-3 px-[10px]"><span>The Index Tab Two</span> <span>+</span></button>
@@ -252,7 +210,9 @@ function drawCurveTypes() {
                   <button>1W</button>
                 </div>
               </div>
-              <div id="chart_div"></div>
+              <div>
+                <div id="chart_div" class="h-[400px] w-[950px]"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -262,7 +222,7 @@ function drawCurveTypes() {
       
       <!-- The All-companies Index start here -->
 
-      <section class="bg-[#FFFFFF] h-[600px] overflow-y-scroll rounded-[20px] mx-6 my-20">
+      <section class="bg-[#FFFFFF]  rounded-[20px] mx-6 my-20">
         <div>
           <div class="flex justify-between mx-12 py-12">
             <h3 class="text-[48px] ">All Companies</h3>
@@ -271,143 +231,156 @@ function drawCurveTypes() {
 
           <div>
 
-            <div class="mx-auto mt-10">
-              <div class="max-w-full">
-                  <table class=" min-w-full border-collapse block md:table">
-                      <thead class="block md:table-header-group">
-                          <tr class="h-10  block md:table-row">
-                              <th class="p-2 text-left block md:table-cell">Company</th>
-                              <th class="p-2 text-left block md:table-cell">Ticker</th>
-                              <th class="p-2 text-left block md:table-cell">Vertical</th>
-                              <th class="p-2 text-left block md:table-cell">Price</th>
-                              <th class="p-2 text-left block md:table-cell">Market Cap ($B)</th>
-                              <th class="p-2 text-left block md:table-cell">Revenue Growth</th>
-                              <th class="p-2 text-left block md:table-cell">Gross Margin</th>
-                              <th class="p-2 text-left block md:table-cell">EV/Revenue</th>
-                              <th class="p-2 text-left block md:table-cell">YTD Performance</th>
+            <div class="mx-auto mt-10 h-[438px] overflow-scroll mr-7">
+              <div class="max-w-full ml-7 mr-5">
+                  <table class=" min-w-full border-collapse">
+                      <thead>
+                          <tr class="h-10">
+                              <th class="p-2 text-left">Company</th>
+                              <th class="p-2 text-center">Ticker</th>
+                              <th class="p-2 text-center">Vertical</th>
+                              <th class="p-2 text-center">Price</th>
+                              <th class="p-2 text-center">Market Cap ($B)</th>
+                              <th class="p-2 text-center">Revenue Growth</th>
+                              <th class="p-2 text-center">Gross Margin</th>
+                              <th class="p-2 text-center">EV/Revenue</th>
+                              <th class="p-2 text-center">YTD Performance</th>
                           </tr>
                       </thead>
-                      <tbody class="block md:table-row-group">
-                          <!-- Row 1 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">YTD Performance</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 1, Col 9</td>
+                      <tbody>
+                          <tr class="h-10 bg-[#F3F3F3] rounded-md">
+                              <td class="p-2 text-left">Adyen</td>
+                              <td class="p-2 text-center">AFRM</td>
+                              <td class="p-2 text-center">Payments</td>
+                              <td class="p-2 text-center">$17.15</td>
+                              <td class="p-2 text-center">$50.5</td>
+                              <td class="p-2 text-center">49.0%</td>
+                              <td class="p-2 text-center">15.8%</td>
+                              <td class="p-2 text-center">6.3</td>
+                              <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 2 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">Affirm</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 2, Col 9</td>
+                          <tr class="h-10 ">
+                            <td class="p-2 text-left">Adyen</td>
+                            <td class="p-2 text-center">AFRM</td>
+                            <td class="p-2 text-center">Payments</td>
+                            <td class="p-2 text-center">$17.15</td>
+                            <td class="p-2 text-center">$50.5</td>
+                            <td class="p-2 text-center">49.0%</td>
+                            <td class="p-2 text-center">15.8%</td>
+                            <td class="p-2 text-center">6.3</td>
+                            <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 3 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">Alkami Technology</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 3, Col 9</td>
+                          <tr class="h-10 bg-[#F3F3F3] rounded-md">
+                              <td class="p-2 text-left">Adyen</td>
+                              <td class="p-2 text-center">AFRM</td>
+                              <td class="p-2 text-center">Payments</td>
+                              <td class="p-2 text-center">$17.15</td>
+                              <td class="p-2 text-center">$50.5</td>
+                              <td class="p-2 text-center">49.0%</td>
+                              <td class="p-2 text-center">15.8%</td>
+                              <td class="p-2 text-center">6.3</td>
+                              <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 4 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">AvidXchange</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 4, Col 9</td>
+                          <tr class="h-10 ">
+                            <td class="p-2 text-left">Adyen</td>
+                            <td class="p-2 text-center">AFRM</td>
+                            <td class="p-2 text-center">Payments</td>
+                            <td class="p-2 text-center">$17.15</td>
+                            <td class="p-2 text-center">$50.5</td>
+                            <td class="p-2 text-center">49.0%</td>
+                            <td class="p-2 text-center">15.8%</td>
+                            <td class="p-2 text-center">6.3</td>
+                            <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 5 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">Bakkt Holdings</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 5, Col 9</td>
+                          <tr class="h-10 bg-[#F3F3F3] rounded-md">
+                              <td class="p-2 text-left">Adyen</td>
+                              <td class="p-2 text-center">AFRM</td>
+                              <td class="p-2 text-center">Payments</td>
+                              <td class="p-2 text-center">$17.15</td>
+                              <td class="p-2 text-center">$50.5</td>
+                              <td class="p-2 text-center">49.0%</td>
+                              <td class="p-2 text-center">15.8%</td>
+                              <td class="p-2 text-center">6.3</td>
+                              <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 6 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">Virtu Financial Inc</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 6, Col 9</td>
+                          <tr class="h-10 ">
+                            <td class="p-2 text-left">Adyen</td>
+                            <td class="p-2 text-center">AFRM</td>
+                            <td class="p-2 text-center">Payments</td>
+                            <td class="p-2 text-center">$17.15</td>
+                            <td class="p-2 text-center">$50.5</td>
+                            <td class="p-2 text-center">49.0%</td>
+                            <td class="p-2 text-center">15.8%</td>
+                            <td class="p-2 text-center">6.3</td>
+                            <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 7 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">Adyen</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 9</td>
+                          <tr class="h-10 bg-[#F3F3F3] rounded-md">
+                              <td class="p-2 text-left">Adyen</td>
+                              <td class="p-2 text-center">AFRM</td>
+                              <td class="p-2 text-center">Payments</td>
+                              <td class="p-2 text-center">$17.15</td>
+                              <td class="p-2 text-center">$50.5</td>
+                              <td class="p-2 text-center">49.0%</td>
+                              <td class="p-2 text-center">15.8%</td>
+                              <td class="p-2 text-center">6.3</td>
+                              <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 8 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">AvidXchange</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 9</td>
+                          <tr class="h-10 ">
+                            <td class="p-2 text-left">Adyen</td>
+                            <td class="p-2 text-center">AFRM</td>
+                            <td class="p-2 text-center">Payments</td>
+                            <td class="p-2 text-center">$17.15</td>
+                            <td class="p-2 text-center">$50.5</td>
+                            <td class="p-2 text-center">49.0%</td>
+                            <td class="p-2 text-center">15.8%</td>
+                            <td class="p-2 text-center">6.3</td>
+                            <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 9 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">Affirm</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 9</td>
+                          <tr class="h-10 bg-[#F3F3F3] rounded-md">
+                              <td class="p-2 text-left">Adyen</td>
+                              <td class="p-2 text-center">AFRM</td>
+                              <td class="p-2 text-center">Payments</td>
+                              <td class="p-2 text-center">$17.15</td>
+                              <td class="p-2 text-center">$50.5</td>
+                              <td class="p-2 text-center">49.0%</td>
+                              <td class="p-2 text-center">15.8%</td>
+                              <td class="p-2 text-center">6.3</td>
+                              <td class="p-2 text-center">24.3%</td>
                           </tr>
-                          <!-- Row 10 -->
-                          <tr class="h-10  block md:table-row">
-                              <td class="p-2 block md:table-cell">Alkami Technology</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 2</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 3</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 4</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 5</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 6</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 7</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 8</td>
-                              <td class="p-2 block md:table-cell">Row 7, Col 9</td>
+                          <tr class="h-10 ">
+                            <td class="p-2 text-left">Adyen</td>
+                            <td class="p-2 text-center">AFRM</td>
+                            <td class="p-2 text-center">Payments</td>
+                            <td class="p-2 text-center">$17.15</td>
+                            <td class="p-2 text-center">$50.5</td>
+                            <td class="p-2 text-center">49.0%</td>
+                            <td class="p-2 text-center">15.8%</td>
+                            <td class="p-2 text-center">6.3</td>
+                            <td class="p-2 text-center">24.3%</td>
                           </tr>
+                          <tr class="h-10 bg-[#F3F3F3] rounded-md">
+                              <td class="p-2 text-left">Adyen</td>
+                              <td class="p-2 text-center">AFRM</td>
+                              <td class="p-2 text-center">Payments</td>
+                              <td class="p-2 text-center">$17.15</td>
+                              <td class="p-2 text-center">$50.5</td>
+                              <td class="p-2 text-center">49.0%</td>
+                              <td class="p-2 text-center">15.8%</td>
+                              <td class="p-2 text-center">6.3</td>
+                              <td class="p-2 text-center">24.3%</td>
+                          </tr>
+                          <tr class="h-10 ">
+                            <td class="p-2 text-left">Adyen</td>
+                            <td class="p-2 text-center">AFRM</td>
+                            <td class="p-2 text-center">Payments</td>
+                            <td class="p-2 text-center">$17.15</td>
+                            <td class="p-2 text-center">$50.5</td>
+                            <td class="p-2 text-center">49.0%</td>
+                            <td class="p-2 text-center">15.8%</td>
+                            <td class="p-2 text-center">6.3</td>
+                            <td class="p-2 text-center">24.3%</td>
+                          </tr>
+                          
                       </tbody>
                   </table>
               </div>
@@ -718,6 +691,8 @@ function drawCurveTypes() {
         </div>
        </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="chart.js"></script>
   </body>
-  <!-- <script src="index.js"></script> -->
 </html>
