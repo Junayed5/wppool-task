@@ -109,9 +109,8 @@ const menu = document.getElementById('toggle-menu')
 const close = document.getElementById('close')
 
 menubar.addEventListener('click', () => {
-  menu.className = 'absolute block bg-white h-[500px] w-[338px] top-4 rounded-2xl '
+  menu.className = 'absolute right-1 block bg-white h-[500px] w-[338px] top-4 rounded-2xl '
 })
 close.addEventListener('click', () => {
-  menu.className = 'absolute hidden bg-white h-[500px] w-[338px] top-4 rounded-2xl '
+  menu.className = 'absolute right-1 hidden bg-white h-[500px] w-[338px] top-4 rounded-2xl'
 })
-
