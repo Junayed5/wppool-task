@@ -30,7 +30,7 @@
     <div class="   bg-[#EDEDED]">
       
       <!-- banner section start here -->
-      <section class="bg-[#2042B6] bg-no-repeat bg-center h-[750px] relative" >
+      <section class="bg-[#2042B6] bg-no-repeat bg-center h-[850px] md:h-[750px] " >
         <!-- navbar -->
         <nav class="bg-[#2042B6] shadow-lg">
           <div class="max-w-7xl mx-auto px-4">
@@ -44,10 +44,10 @@
                 
                 <div class="flex items-center gap-5">
                  <div class="flex gap-3">
-                  <button class="border  rounded-full h-[42px] w-[42px] flex items-center justify-center">
+                  <button class="border  rounded-full h-7 w-10 md:h-[42px] md:w-[42px] my-3 md:my-0 flex items-center justify-center">
                       <img src="https://i.ibb.co/KL4k3y2/share.png" alt="share">
                   </button>
-                  <button class="border px-[16px] py-[17px] rounded-full text-white text-sm h-[42px] flex items-center">
+                  <button class="border  px-2 md:px-4 py-[17px] text-xs md:text-sm rounded-full text-white text-sm h-[42px] flex items-center">
                       Download the 2024 Report
                   </button>
                  </div>
@@ -94,13 +94,13 @@
 
                       <div class="mx-9 text-lg">
                         <ul class="">
-                          <li class="py-2">The WPPOOL Index</li>
-                          <li class="py-2">All Companies</li>
-                          <li class="py-2">Potential Future Listings</li>
-                          <li class="py-2">State of USA</li>
-                          <li class="py-2">Stories & Ideas</li>
-                          <li class="py-2">Stories & Ideas</li>
-                          <li class="py-2">WPPOOL Portfolio Companies</li>
+                          <li class="py-2 cursor-pointer"><a href="#woppol-index">The WPPOOL Index</a></li>
+                          <li class="py-2 cursor-pointer"><a href="#all-companies">All Companies</a></li>
+                          <li class="py-2 cursor-pointer"><a href="#future">Potential Future Listings</a></li>
+                          <li class="py-2 cursor-pointer"><a href="#state">State of USA</a></li>
+                          <li class="py-2 cursor-pointer"><a href="#stories">Stories & Ideas</a></li>
+                          <li class="py-2 cursor-pointer"><a href="#about">About WPPOOL</a></li>
+                          <li class="py-2 cursor-pointer"><a href="#portfolio">WPPOOL Portfolio Companies</a></li>
                         </ul>
                         <p>Visit WPPOOL</p>
                       </div>
@@ -150,56 +150,96 @@
             </div>
           </div>
 
-          <div class="absolute right-11 bottom-11 bg-white h-16 w-16 flex justify-center items-center rounded-full">
+          <div class="absolute  right-11 bottom-32 md:bottom-0 bg-white h-16 w-16 flex justify-center items-center rounded-full">
             <img src="https://i.ibb.co/3fM5sYr/arrow-downward-alt.png" alt="">
           </div>
       </section>
-      <!-- banner section start here -->
+      <!-- banner section end here -->
 
-      <!-- The WPPOOL Index start here -->
-      <section class="bg-[#FFFFFF] h-[790px] rounded-sm mx-6 my-20">
-        <div class="py-5">
-          <nav class="bg-[#F3F3F3] shadow-lg mx-5 sticky top-0">
-            <div class="max-w-7xl mx-auto px-4">
-              <div class="flex justify-between">
-                  <!-- Logo -->
-                  <div>
-                    <a href="#" class="flex items-center py-5 px-2 text-gray-700">
-                      <img src="https://i.ibb.co/kDPB6k2/logo.png" alt="" />
-                    </a>
+      <nav class="bg-[#F3F3F3] shadow-lg mx-5 mt-6 sticky top-5 absolute">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between">
+              <!-- Logo -->
+              <div>
+                <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+                  <img src="https://i.ibb.co/kDPB6k2/logo.png" alt="" />
+                </a>
+              </div>
+              
+              <div class="flex items-center gap-5">
+               <div class="flex gap-3">
+                <button class="border border-[#AFCD80]  rounded-full h-6 w-10 md:h-[42px] md:w-[42px] my-3 md:my-0 flex items-center justify-center">
+                    <img src="https://i.ibb.co/Gdj8Mpt/share-1.png" alt="share">
+                </button>
+                <button class="border border-[#115CD9] px-2 md:px-4 py-[17px] rounded-full text-black text-xs md:text-sm h-[42px] flex items-center">
+                    Download the 2024 Report
+                </button>
+               </div>
+                
+                <button id="toggle-menubar" class="mobile-menu-button h-fit">
+                    <svg
+                      class="w-6 h-6 text-black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                  </button>
+
+                  <div id="toggle-sticky-menu" class="absolute right-1 md:right-72 hidden bg-white h-[500px] w-[338px] top-4 rounded-2xl" >
+                    <div class="flex justify-between py-3 mx-2">
+                      <div class="flex gap-3">
+                        <button class="border bg-[#AFCD80]  rounded-full h-[42px] w-[42px] flex items-center justify-center">
+                            <img src="https://i.ibb.co/KL4k3y2/share.png" alt="share">
+                        </button>
+                        <button class="border bg-[#2042B6] px-[16px] py-[17px] rounded-full text-white text-sm h-[42px] flex items-center">
+                            Download the 2024 Report
+                        </button>
+                      </div>
+                        
+                        <button id="sticky-close" class="mr-5 mt-3 h-fit">
+                          <svg fill="#000000" height="15px" width="15px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                          viewBox="0 0 512 512" xml:space="preserve">
+                            <g>
+                              <g>
+                                <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+                                  512,452.922 315.076,256 		"/>
+                              </g>
+                            </g>
+                          </svg>
+                        </button>
+                    </div>
+
+                    <div class="mx-9 text-lg">
+                      <ul class="">
+                        <li class="py-2 cursor-pointer"><a href="#woppol-index">The WPPOOL Index</a></li>
+                        <li class="py-2 cursor-pointer"><a href="#all-companies">All Companies</a></li>
+                        <li class="py-2 cursor-pointer"><a href="#future">Potential Future Listings</a></li>
+                        <li class="py-2 cursor-pointer"><a href="#state">State of USA</a></li>
+                        <li class="py-2 cursor-pointer"><a href="#stories">Stories & Ideas</a></li>
+                        <li class="py-2 cursor-pointer"><a href="#about">About WPPOOL</a></li>
+                        <li class="py-2 cursor-pointer"><a href="#portfolio">WPPOOL Portfolio Companies</a></li>
+                      </ul>
+                      <p>Visit WPPOOL</p>
+                    </div>
                   </div>
                   
-                  <div class="flex items-center gap-5">
-                   <div class="flex gap-3">
-                    <button class="border border-[#AFCD80]  rounded-full h-[42px] w-[42px] flex items-center justify-center">
-                        <img src="https://i.ibb.co/Gdj8Mpt/share-1.png" alt="share">
-                    </button>
-                    <button class="border border-[#115CD9] px-[16px] py-[17px] rounded-full text-black text-sm h-[42px] flex items-center">
-                        Download the 2024 Report
-                    </button>
-                   </div>
-                    
-                    <button class="mobile-menu-button h-fit">
-                        <svg
-                          class="w-6 h-6 text-black"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                          />
-                        </svg>
-                      </button>
-                  </div>
-          </nav>
+              </div>
+      </nav>
+       <!-- The WPPOOL Index start here -->
+      <section id="woppol-index" class="bg-[#FFFFFF] h-[790px] rounded-sm mx-6 my-12">
+        <div class="py-5">
+          
 
           <div class="flex">
-            <div class="bg-[#EFF3F6] h-[640px] w-56 mx-6 my-5 rounded-xl">
+            <div class="bg-[#EFF3F6] h-[640px] w-40 md:w-56 mx-6 my-5 overflow-x-scroll  rounded-xl">
               <div class="mx-2 py-2">
                 <button class="h-9 w-52 bg-[#2042B6] text-white text-base flex justify-between items-center rounded-md mt-3 px-[10px]"><span>The Index</span> <span>-</span></button>
                 <button class="h-9 w-52 bg-[#EFF3F6] text-[#647888] text-base flex justify-between items-center rounded-md mt-3 px-[10px]"><span>The Index Tab Two</span> <span>+</span></button>
@@ -277,7 +317,7 @@
       
       <!-- The All-companies Index start here -->
 
-      <section class="bg-[#FFFFFF] rounded-[20px] mx-6 my-20">
+      <section id="all-companies" class="bg-[#FFFFFF] rounded-[20px] mx-6 my-20">
         <div>
           <div class="flex flex-col md:flex-row lg:flex-row justify-between mx-12 py-12">
             <h3 class="text-2xl md:text-[48px] lg:text-[48px]  mb-5 md:mb-none">All Companies</h3>
@@ -460,39 +500,39 @@
       <!-- The All-companies Index end here -->
 
       <!-- Potential Future Listings start here -->
-      <section class=" w-fit mx-auto my-[150px]">
+      <section id="future" class=" w-fit mx-auto my-[150px]">
         <h2 class="text-4xl md:text-[78px] lg:text-[78px]  font-normal pt-13">Potential Future Listings</h2>
         <p class="text-base font-normal w-fit md:w-[880px] lg:w-[880px] pt-5 pb-7">Porem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
         
         <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-x-5 gap-y-5 w-fit mx-auto">
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/61bmMTM/stripe.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/3447mWG/klarna.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/GMDwhNG/plaid.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/8zxY0H7/checkout-com.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/dDG8j2p/revolut.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/xmcDZ0F/chime.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/2tdsxmb/n26.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/wSzV9G3/brex.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/44Rg4xj/deel.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/8mGcSkx/gusto.png" alt="">
           </div>
         </div>
@@ -501,7 +541,7 @@
 
 
       <!-- State of USA start here -->
-      <section class="max-w-[1180px] mx-auto bg-[url('https://i.ibb.co/TTSrFvq/bg2.png')] bg-no-repeat bg-right ">
+      <section id="state" class="max-w-[1180px] mx-auto bg-[url('https://i.ibb.co/TTSrFvq/bg2.png')] bg-no-repeat bg-right ">
         <h2 class="text-4xl md:text-5xl lg:text-5xl font-normal pt-13">State of USA</h2>
         <select class="bg-[#2042B6] rounded-full text-white text-2xl md:text-5xl lg:text-5xl h-[58px] w-[200px] pl-[22px] b-2 border-none  " name="years" id="years">
           <option value="2022">2022</option>
@@ -561,7 +601,7 @@
       <!-- State of USA end here -->
 
       <!-- Stories & Ideas start here -->
-      <section class="w-fit mx-auto my-[150px]">
+      <section id="stories" class="w-fit mx-auto my-[150px]">
         <h2 class="text-4xl md:text-5xl lg:text-5xl font-normal pt-13">Stories & Ideas</h2>
         <p class="text-base font-normal w-fit pt-5 pb-7">The latest news and updates</p>
         
@@ -622,7 +662,7 @@
 
       <!-- About WPPOOL starts here -->
 
-      <section class="max-w-[1180px] mx-auto">
+      <section id="about" class="max-w-[1180px] mx-auto">
         <div class="px-[72px] py-[78px] h-fit md:h-[420px] lg:h-[420px] mt-20 mb-[100px] bg-white rounded-xl bg-[url('https://i.ibb.co/g9VpY2B/Mask-group.png')] bg-no-repeat bg-right">
           <h2 class="text-4xl md:text-5xl lg:text-5xl font-normal pt-13">About WPPOOL</h2>
         <p class="text-3xl text-[#7D7F81] font-normal pt-5 pb-4">Investing in wppool for over 50 years</p>
@@ -635,68 +675,68 @@
 
 
       <!-- Selected WPPOOL Portfolio Companies start here -->
-      <section class="w-fit mx-auto my-[120px]">
+      <section id="portfolio" class="w-fit mx-auto my-[120px]">
         <h2 class="text-2xl md:text-5xl lg:text-5xl font-normal pt-13">Selected WPPOOL Portfolio Companies</h2>
         
         <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-x-5 gap-y-5 w-fit mx-auto mt-12 mb-14">
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/c84ByQV/ae99cd49-2667-464e-b9db-b39cee0126e1-1.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/CKSS60P/62e84990058cefbfc33ef312-vendr-logo-1.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/PzcTpvq/image-67.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/R70qBgY/image-50.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/XXsqq1L/image-51.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/QQBpL74/Group-166.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/0hPTyYy/image-55.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/c1TvCy6/image-56.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/c1TvCy6/image-56.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/4mtv1JN/image-54.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/vLyq3pp/flywire.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/K0DGMxR/quovo-logo.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/QX4TdFw/Vector.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/3v1DTcL/nota-bene-logo-1.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/42YtJRL/Recurly-Logo-Purple-1.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/GdsGYnW/Group-169.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/SnYyT0Q/kensho-social-card-2.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/hR2nXy9/fire.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/YpYdWG7/argyle-black-l-2.png" alt="">
           </div>
-          <div class="h-28 md:h-[120px] w-52 md:w-[220px] bg-white flex justify-center items-center rounded-md">
+          <div class="h-28 md:h-[120px] w-40 md:w-[220px] bg-white flex justify-center items-center rounded-md">
             <img src="https://i.ibb.co/zJJXGhh/ss-logo-2color-black-1.png" alt="">
           </div>
           

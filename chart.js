@@ -107,10 +107,20 @@ function drawCrosshairs() {
 const menubar = document.getElementById('toggle-bar');
 const menu = document.getElementById('toggle-menu')
 const close = document.getElementById('close')
+const toggleMenubar = document.getElementById('toggle-menubar')
+const stickyMenu = document.getElementById('toggle-sticky-menu')
+const stickyClose = document.getElementById('sticky-close')
 
 menubar.addEventListener('click', () => {
   menu.className = 'absolute right-1 block bg-white h-[500px] w-[338px] top-4 rounded-2xl '
-})
+});
 close.addEventListener('click', () => {
   menu.className = 'absolute right-1 hidden bg-white h-[500px] w-[338px] top-4 rounded-2xl'
+});
+
+toggleMenubar.addEventListener('click', () => {
+  stickyMenu.className = "absolute right-1 md:right-72 block bg-white h-[500px] w-[338px] top-4 rounded-2xl"
+})
+stickyClose.addEventListener('click', () => {
+  stickyMenu.className = "absolute right-1 md:right-72 hidden bg-white h-[500px] w-[338px] top-4 rounded-2xl"
 })
